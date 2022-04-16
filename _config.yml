@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: Thornboo Blog
+subtitle: thornboo的博客
+description: 主动思考，积极行动。
+keywords: blog
+author: thornboo
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://thornboo.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -105,3 +105,18 @@ deploy:
   type: git
   repo: git@github.com:thornboo/thornboo.github.io.git
   branch: gh-pages
+
+# Search
+## See: https://github.com/theme-next/hexo-generator-searchdb
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
+
+# 开启rss订阅
+# npm install hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20

@@ -2,9 +2,9 @@
 #  Your basic info
 # ---------------------------------------------------------------------------------------
 base_info:
-  title: Keep Theme
-  author: Keep Team
-  url: https://keep.xpoet.cn/
+  title: Thornboo Blog
+  author: thornboo
+  url: https://thornboo.github.io/
   # Logo image (You can use local image, image external link or don’t fill)
   logo_img:
 
@@ -13,13 +13,13 @@ base_info:
 # ---------------------------------------------------------------------------------------
 style:
   # Theme primary color
-  primary_color: "#0066CC"
+  primary_color: "#cb3e3e"
 
   # Avatar (You can use local image or image external link)
-  avatar: /images/avatar.svg
+  avatar: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/博客作者头像.7gp4bjoa1h80.webp
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/logo.svg
+  favicon: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/博客favicon图标.2fwqx5oa9e4g.webp
 
   # Article image align position, value: left | center
   article_img_align: left
@@ -32,36 +32,36 @@ style:
 
   # Mouse hover
   hover:
-    shadow: false # shadow effect when the mouse hover
-    scale: false # scale effect when the mouse hover
+    shadow: true # shadow effect when the mouse hover
+    scale: true # scale effect when the mouse hover
 
   # First screen
   first_screen:
-    enable: false
+    enable: true
     background_img: /images/bg.svg # You can use local image or image external link
-    description: Keep writing and Keep loving.
+    description: 主动思考，积极行动。
 
   # Scroll style settings
   scroll:
     progress_bar:
       enable: false
     percent:
-      enable: false
+      enable: true
 
 # ---------------------------------------------------------------------------------------
 # Social contact link
 # ---------------------------------------------------------------------------------------
 social_contact:
-  enable: false
+  enable: true
   links:
-    github: # your GitHub URL
-    weixin: # your WeChat QR-Code URL
-    qq: # your QQ QR-Code URL
+    github: https://github.com/thornboo # your GitHub URL
+    weixin: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/WeChat-QR-Code.104fhqgw220g.webp
+    qq: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/QQ-QR-Code.7ku703nmuwo0.webp
     weibo: # your WeiBo URL
     zhihu: # your ZhiHu URL
     twitter: # your twitter URL
     facebook: # your facebook URL
-    email: # your email
+    email: zhaozhuang1210@gmail.com # your email
 
 # ---------------------------------------------------------------------------------------
 # Navigation menu
@@ -69,10 +69,10 @@ social_contact:
 menu:
   Home: /
   Archives: /archives
-  # Categories: /categories
-  # Tags: /tags
-  # Links: /links
-  # About: /about
+  Categories: /categories
+  Tags: /tags
+  Links: /links
+  About: /about
   # Changelog: /changelog
   # ......
 
@@ -81,10 +81,10 @@ menu:
 # ---------------------------------------------------------------------------------------
 home_article:
   category:
-    enable: false # show category in home page article block
+    enable: true # show category in home page article block
     limit: 3 # max number of categories shown in home page article block
   tag:
-    enable: false # show tags in home page article block
+    enable: true # show tags in home page article block
     limit: 5 # max number of tags shown in home page article block
 
 # ---------------------------------------------------------------------------------------
@@ -95,44 +95,44 @@ post:
   # Dependencies: hexo-wordcount (npm install hexo-wordcount)
   # See: https://github.com/willin/hexo-wordcount
   word_count:
-    enable: false
-    wordcount: false # word count, one article
-    min2read: false # time to read, one article
+    enable: true
+    wordcount: true # word count, one article
+    min2read: true # time to read, one article
 
   # Author label
   author_label:
     enable: true
     auto: true # if true, show Lv1, Lv2, Lv3... , If false, show custom label
     # label array item can be one or more
-    custom_label_list: ["Trainee", "Engineer", "Architect", "CTO", "BOSS"]
+    custom_label_list: ["前端工程师"]
 
 # ---------------------------------------------------------------------------------------
 # Code copy
 # ---------------------------------------------------------------------------------------
 code_copy:
-  enable: false
-  style: default # values: default | mac
+  enable: true
+  style: mac # values: default | mac
 
 # ---------------------------------------------------------------------------------------
 # Table of Contents in the Sidebar
 # ---------------------------------------------------------------------------------------
 toc:
-  enable: false
+  enable: true
 
   # Automatically add list number to toc.
-  number: false
+  number: true
 
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
 
   # If true, open TOC every time when you enter the article page
-  init_open: false
+  init_open: true
 
 # ---------------------------------------------------------------------------------------
 # Post copyright info
 # ---------------------------------------------------------------------------------------
 copyright_info:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------------------------------
 # Website count
@@ -141,10 +141,10 @@ website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
   busuanzi_count:
-    enable: false
-    site_uv: false
-    site_pv: false
-    page_pv: false
+    enable: true
+    site_uv: true
+    site_pv: true
+    page_pv: true
 
 # ---------------------------------------------------------------------------------------
 # Local Search
@@ -152,15 +152,15 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false
-  preload: false # Preload the search data when the page loads
+  enable: true
+  preload: true # Preload the search data when the page loads
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
 # ---------------------------------------------------------------------------------------
 comment:
-  enable: false
-  use: valine # values: valine | gitalk | twikoo
+  enable: true
+  use: gitalk # values: valine | gitalk | twikoo
 
   # Valine
   # See: https://github.com/xCss/Valine
@@ -172,10 +172,10 @@ comment:
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   gitalk:
-    github_id: # GitHub repo owner
-    repository: # Repository name to store issues
-    client_id: # GitHub Application Client ID
-    client_secret: # GitHub Application Client Secret
+    github_id: thornboo # GitHub repo owner
+    repository: thornboo.github.io # Repository name to store issues
+    client_id: 5a587300d1cc759218a8 # GitHub Application Client ID
+    client_secret: ca552df0666567b315934034de182a9955f54441 # GitHub Application Client Secret
 
   # Twikoo
   # See: https://github.com/imaegoo/twikoo
@@ -189,25 +189,25 @@ comment:
 # See: https://github.com/hexojs/hexo-generator-feed
 # ---------------------------------------------------------------------------------------
 rss:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------------------------------
 # Lazyload image
 # ---------------------------------------------------------------------------------------
 lazyload:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------------------------------
 # CDN
 # ---------------------------------------------------------------------------------------
 cdn:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------------------------------
 # PJAX
 # ---------------------------------------------------------------------------------------
 pjax:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------------------------------
 # Footer settings
