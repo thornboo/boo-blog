@@ -1,17 +1,16 @@
 ---
 title: 静态HTML页面传值的方法
 date: 2022-04-17 11:47:47
-tags:
+tags: web前端
 ---
 
 #### 1、通过url传值
 
 示例如下：
+
 这是A页面：
 
 ```
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>A page</title>
@@ -35,7 +34,6 @@ tags:
 <body>
 <a href="b.html" id="aPage">在url里带数据跳转到b页面</a>
 </body>
-</html>
 ```
 
 注意：JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
@@ -43,8 +41,6 @@ tags:
 这是B页面：
 
 ```
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>B page</title>
@@ -73,31 +69,22 @@ tags:
 <body>
 <input type="text" id="getUrlData">
 </body>
-</html>
 ```
 
 *注意：*
 
 1. window.location.search.substr(1).match(reg);  
-
 2. location是包含了相关的url的信息，它是windown的一部分。  
-
-1. search是一个可以查询的属性，可以查询？之后的部分。
-
-2. substr(1)是为了去掉第一个？
-
-3. match()是你要匹配的部分 后面可以是正则表达式。
-
-4. return unescpe（r[2]） 返回的值 一个数组。  
-
-5. 这里是开始匹配，找到了返回对应url值，没找到返回null。  
+3. search是一个可以查询的属性，可以查询？之后的部分。
+4. substr(1)是为了去掉第一个？
+5. match()是你要匹配的部分 后面可以是正则表达式。
+6. return unescpe（r[2]） 返回的值 一个数组。  
+7. 这里是开始匹配，找到了返回对应url值，没找到返回null。  
 
 此方法不足之处： 
 
 * URL传递参数长度受限，最大为2K。 
-
 * URL只能传递字符型参数，不能传递中文。 
-
 * 容易导致信息泄露，重要信息需要加密后才能传递。  
 
 #### 2、通过浏览器cookie传值
