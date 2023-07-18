@@ -14,9 +14,9 @@ date: 2022-04-17 00:28:41
 
 ## 个人信息
 
-* 性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;年 龄：21
-* 手 机：18096347468 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  邮 箱：zhaozhuang1210@gmail.com
-* 专 业：计算机科学与技术 &emsp;&emsp;&emsp;&emsp;&emsp; 岗 位：前端工程师
+  性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;年 龄：21<br>
+  手 机：18096347468 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;邮 箱：zhaozhuang1210@gmail.com<br>
+  专 业：计算机科学与技术 &emsp;&emsp;&emsp;&emsp;&emsp; 岗 位：前端工程师
 
 ## 工作及教育经历
 
