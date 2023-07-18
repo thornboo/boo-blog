@@ -33,7 +33,7 @@ tags: node
   "name": "blog",  //项目名称
   "version": "0.0.0",   //版本
   "description": "",   //项目描述
-  "private": true,  
+  "private": true,
   "main": "index.js",  //入口文件
   "scripts": {   //配置一些通用的命令脚本
 	"start": "node ./bin/www"

@@ -16,10 +16,10 @@ style:
   primary_color: "#cb3e3e"
 
   # Avatar (You can use local image or image external link)
-  avatar: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/博客作者头像.7gp4bjoa1h80.webp
+  avatar: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/博客作者头像.2945w1d4pffo.webp
 
   # Favicon (You can use local image or image external link)
-  favicon: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/博客favicon图标.2fwqx5oa9e4g.webp
+  favicon: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/博客favicon图标.2fwqx5oa9e4g.webp
 
   # Article image align position, value: left | center
   article_img_align: left
@@ -55,8 +55,8 @@ social_contact:
   enable: true
   links:
     github: https://github.com/thornboo # your GitHub URL
-    weixin: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/WeChat-QR-Code.104fhqgw220g.webp
-    qq: https://cdn.jsdelivr.net/gh/thornboo/blog-image-bed@master/QQ-QR-Code.7ku703nmuwo0.webp
+    weixin: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/WeChat-QR-Code.104fhqgw220g.webp
+    qq: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/QQ-QR-Code.7ku703nmuwo0.webp
     weibo: # your WeiBo URL
     zhihu: # your ZhiHu URL
     twitter: # your twitter URL
