@@ -1,71 +1,55 @@
-# ---------------------------------------------------------------------------------------
-#  Your basic info
-# ---------------------------------------------------------------------------------------
+# 设置博客站点基本信息
 base_info:
+  # 设置博客站点的标题
   title: Thornboo Blog
+  # 设置作者名称
   author: thornboo
   url: https://thornboo.github.io/
-  # Logo image (You can use local image, image external link or don’t fill)
-  logo_img:
 
-# ---------------------------------------------------------------------------------------
-# Theme style settings
-# ---------------------------------------------------------------------------------------
+# 自定义配置Keep主题的样式
 style:
-  # Theme primary color
+  # 设置博客站点主题色，支持 十六进制、rgb 和 rgba 颜色格式
   primary_color: "#cb3e3e"
-
-  # Avatar (You can use local image or image external link)
-  avatar: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/博客作者头像.2945w1d4pffo.webp
-
-  # Favicon (You can use local image or image external link)
-  favicon: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/博客favicon图标.2fwqx5oa9e4g.webp
-
-  # Article image align position, value: left | center
-  article_img_align: left
-
-  # Left side width
-  left_side_width: 260px
-
-  # Content area max width
-  content_max_width: 920px
-
-  # Mouse hover
+  # 设置博客站点头部 LOGO
+  logo: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/blog-info/favicons-32.7kivdj6o7ss0.webp
+  # 设置博客站点作者头像
+  avatar: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/blog-info/博客作者头像.pusoqr2t06o.webp
+  # 设置博客站点 favicon 图标
+  favicon: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/blog-info/favicons-32.7kivdj6o7ss0.webp
+  # 设置博客站点的字体样式
+  font_family: PingFangSC
+  # 设置鼠标悬浮时的样式
   hover:
-    shadow: true # shadow effect when the mouse hover
-    scale: true # scale effect when the mouse hover
-
-  # First screen
+    shadow: true
+    scale: true
+  # 设置首屏模块
   first_screen:
     enable: true
-    background_img: /images/bg.svg # You can use local image or image external link
+    background_img: /images/bg.svg
     description: 主动思考，积极行动。
-
-  # Scroll style settings
+    # 设置头部是否透明
+    header_transparent: false
+  # 设置页面滚动时的样式
   scroll:
     progress_bar:
       enable: false
     percent:
       enable: true
 
-# ---------------------------------------------------------------------------------------
-# Social contact link
-# ---------------------------------------------------------------------------------------
+# 设置首屏里面配置第三方社交链接
 social_contact:
   enable: true
   links:
-    github: https://github.com/thornboo # your GitHub URL
-    weixin: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/WeChat-QR-Code.104fhqgw220g.webp
-    qq: https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/QQ-QR-Code.7ku703nmuwo0.webp
-    weibo: # your WeiBo URL
-    zhihu: # your ZhiHu URL
-    twitter: # your twitter URL
-    facebook: # your facebook URL
-    email: zhaozhuang1210@gmail.com # your email
+    github: https://github.com/thornboo
+    weixin: img | https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/blog-info/weChat-QR-Code.2yisnac4u120.webp
+    qq: img| https://cdn.staticaly.com/gh/thornboo/blog-image-bed@master/blog-info/QQ-QR-Code.3ejsm2p1oy60.webp
+    weibo:
+    zhihu:
+    twitter:
+    facebook:
+    email: zhaozhuang1210@gmail.com
 
-# ---------------------------------------------------------------------------------------
-# Navigation menu
-# ---------------------------------------------------------------------------------------
+# 配置博客站点的头部导航菜单
 menu:
   Home: /
   Archives: /archives
@@ -74,69 +58,50 @@ menu:
   Links: /links
   About: /about
   # Changelog: /changelog
-  # ......
 
-# ---------------------------------------------------------------------------------------
-# Home page article block display settings
-# ---------------------------------------------------------------------------------------
+# 设置首页文章块底部的标签和分类信息显示
 home_article:
+  # 设置显示文章分类
   category:
-    enable: true # show category in home page article block
-    limit: 3 # max number of categories shown in home page article block
-  tag:
-    enable: true # show tags in home page article block
-    limit: 5 # max number of tags shown in home page article block
-
-# ---------------------------------------------------------------------------------------
-# Post page Settings
-# ---------------------------------------------------------------------------------------
-post:
-  # Post word count
-  # Dependencies: hexo-wordcount (npm install hexo-wordcount)
-  # See: https://github.com/willin/hexo-wordcount
-  word_count:
     enable: true
-    wordcount: true # word count, one article
-    min2read: true # time to read, one article
+    limit: 3
+  # 设置显示文章标签
+  tag:
+    enable: true
+    limit: 5
 
-  # Author label
+# 设置文章内容页
+post:
+  # 设置作者标识
   author_label:
     enable: true
-    auto: true # if true, show Lv1, Lv2, Lv3... , If false, show custom label
-    # label array item can be one or more
-    custom_label_list: ["前端工程师"]
+    auto: true
+    custom_label_list: ["全栈工程师"]
+  # 设置文章字数统计和计算阅读时长
+  word_count:
+    enable: true
+    wordcount: true
+    min2read: true
+  # 设置图片位置
+  article_img_align: left
+  # 设置是否开启文章内容页的文章版权信息
+  copyright_info: true
 
-# ---------------------------------------------------------------------------------------
-# Code copy
-# ---------------------------------------------------------------------------------------
-code_copy:
-  enable: true
-  style: mac # values: default | mac
+# 开启代码块工具
+code_block:
+  tools:
+    enable: true
+    style: mac
+  highlight_theme: default
 
-# ---------------------------------------------------------------------------------------
-# Table of Contents in the Sidebar
-# ---------------------------------------------------------------------------------------
+# 设置文章 TOC 目录结构
 toc:
   enable: true
-
-  # Automatically add list number to toc.
   number: false
-
-  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
-
-  # If true, open TOC every time when you enter the article page
   init_open: true
 
-# ---------------------------------------------------------------------------------------
-# Post copyright info
-# ---------------------------------------------------------------------------------------
-copyright_info:
-  enable: true
-
-# ---------------------------------------------------------------------------------------
-# Website count
-# ---------------------------------------------------------------------------------------
+# 设置网站计数
 website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
@@ -146,18 +111,12 @@ website_count:
     site_pv: true
     page_pv: true
 
-# ---------------------------------------------------------------------------------------
-# Local Search
-# Dependencies: hexo-generator-searchdb
-# See: https://github.com/theme-next/hexo-generator-searchdb
-# ---------------------------------------------------------------------------------------
+# 设置站内搜索功能
 local_search:
   enable: true
-  preload: true # Preload the search data when the page loads
+  preload: true # 在页面加载时预加载搜索数据
 
-# ---------------------------------------------------------------------------------------
-# Comment plugin
-# ---------------------------------------------------------------------------------------
+# 设置评论系统
 comment:
   enable: true
   use: gitalk # values: valine | gitalk | twikoo
@@ -165,59 +124,49 @@ comment:
   # Valine
   # See: https://github.com/xCss/Valine
   valine:
-    appid: # your leancloud application appid
-    appkey: # your leancloud application appkey
-    placeholder: # your placeholder
+    appid:
+    appkey:
+    placeholder:
 
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   gitalk:
-    github_id: thornboo # GitHub repo owner
-    repository: thornboo.github.io # Repository name to store issues
-    client_id: 5a587300d1cc759218a8 # GitHub Application Client ID
-    client_secret: ca552df0666567b315934034de182a9955f54441 # GitHub Application Client Secret
+    github_id: thornboo
+    repository: thornboo.github.io
+    client_id: 5a587300d1cc759218a8
+    client_secret: ca552df0666567b315934034de182a9955f54441
 
   # Twikoo
   # See: https://github.com/imaegoo/twikoo
   twikoo:
-    env_id: # Tencent Cloud environment id
-    region: # environment region. If select Guangzhou, fill in "ap-guangzhou".
+    env_id:
+    region:
 
-# ---------------------------------------------------------------------------------------
-# RSS
-# Dependencies: hexo-generator-feed
-# See: https://github.com/hexojs/hexo-generator-feed
-# ---------------------------------------------------------------------------------------
+# RSS订阅功能
 rss:
   enable: true
 
-# ---------------------------------------------------------------------------------------
-# Lazyload image
-# ---------------------------------------------------------------------------------------
+# 设置图片懒加载
 lazyload:
   enable: true
 
-# ---------------------------------------------------------------------------------------
-# CDN
-# ---------------------------------------------------------------------------------------
+# 设置CDN加速功能
 cdn:
   enable: true
+  provider: jsdelivr  # Option values: jsdelivr | unpkg
 
-# ---------------------------------------------------------------------------------------
-# PJAX
-# ---------------------------------------------------------------------------------------
+# 设置Keep主题的PJAX功能，带来单页应用体验
 pjax:
   enable: true
 
-# ---------------------------------------------------------------------------------------
-# Footer settings
-# ---------------------------------------------------------------------------------------
+# 设置网站底部的信息展示
 footer:
-  since: 2020 # the starting year of your website, Can be null
-  icp: # ICP record number of your website, Can be null
-  upyun: # url
+  since: 2022
+  icp:
+  site_deploy:
+    enable: true
+    provider: github
+    url: https://github.com
 
-# ---------------------------------------------------------------------------------------
-# Keep version (Please don't modify)
-# ---------------------------------------------------------------------------------------
+# Keep version
 version: 3.4.5

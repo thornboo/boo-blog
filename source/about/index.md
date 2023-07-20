@@ -1,6 +1,6 @@
 ---
 title: about
-date: 2022-04-17 00:28:41
+date: 2023-07-20 00:28:41
 ---
 
 # 关于我
@@ -14,15 +14,10 @@ date: 2022-04-17 00:28:41
 
 ## 个人信息
 
-  性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;年 龄：21<br>
-  手 机：18096347468 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;邮 箱：zhaozhuang1210@gmail.com<br>
-  专 业：计算机科学与技术 &emsp;&emsp;&emsp;&emsp;&emsp; 岗 位：前端工程师
-
-## 工作及教育经历
-
-* 眉山环天智慧科技有限公司&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;2023.7~至今&emsp;&emsp;&emsp;&emsp;&emsp; 研发部-前端开发实习
-* 眉山环天智慧科技有限公司&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;2022.6~2022.9&emsp;&emsp;&emsp;&emsp; 研发部-前端开发实习
-* 南京航空航天大学金城学院&emsp;&emsp;&emsp;&emsp;&emsp;2020.9~2024.6&emsp;&emsp;&emsp;&emsp; 计算机科学与技术专业-本科
+* 赵壮 / 男 / 21
+* 本科 / 计算机科学与技术
+* 期望职位：web前端开发
+* 期望城市：北京、上海、杭州、成都
 
 ## 专业技能
 
@@ -78,5 +73,5 @@ date: 2022-04-17 00:28:41
 
 ## 联系方式：
 - 邮箱：zhaozhuang1210@gmail.com
-- 微信：18096347468
+- 微信(手机同号)：18096347468
 - QQ：599417358
