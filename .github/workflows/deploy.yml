@@ -1,0 +1,49 @@
+name: Deploy hexo blog
+
+on:
+  push:
+    branches:
+    - dev
+
+env:
+  GIT_USER: starrynightzyq[bot]
+  GIT_EMAIL: starrynightzyq[bot]@gmail.com
+
+jobs:
+  build:
+    name: Build with node ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.HEXO_DEPLOY_PRI }}
+          name: id_rsa
+          known_hosts: 'github.com'
+          if_key_exists: replace
+      - name: Configuration environment
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+      - name: Setup pandoc
+        uses: nikeee/setup-pandoc@v1
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Deploy hexo
+        run: |
+          npm run publish
