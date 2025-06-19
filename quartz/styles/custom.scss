@@ -1,0 +1,31 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+.tk-footer {
+  // 移动到底部一起
+  visibility: hidden;
+}
+
+.tk-avatar img {
+  margin: 0;
+}
+
+.twikoo {
+  margin-top: 80px;
+  padding: 0 10px;
+}
+
+.twikoo strong {
+  color: var(--darkgray);
+  background-image: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+.tk-content > * {
+  color: #f2f2f2;
+}
+
+.tk-content.tk-content-expand > * {
+  color: var(--darkgray);
+}
