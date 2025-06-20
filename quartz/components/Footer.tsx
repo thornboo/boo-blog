@@ -31,7 +31,7 @@ export default ((opts?: Options) => {
             </div>
             <div>
               <span style="margin-left: 8px">
-                <a href="https://status.iceprosurface.com/" target="_blank">站点状态</a>
+                <a href="https://status.thornboo.com/" target="_blank">站点状态</a>
               </span>
             </div>
           </div>

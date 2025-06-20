@@ -13,7 +13,7 @@ document.addEventListener('nav', async (event) => {
   });
   const id = document.getElementById("tcomment")?.dataset.id;
   (window as any).twikoo?.init({
-    envId: 'https://comment.iceprosurface.com',
+    envId: 'https://comment.thornboo.com',
     el: '#tcomment',
     path: id,
   });

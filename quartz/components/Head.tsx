@@ -31,7 +31,7 @@ export default (() => {
           isPageReproduction && <meta name="robots" content="noindex" />
         }
         <link rel="preconnect" spa-preserve href="https://cdnjs.cloudflare.com"></link>
-        <link rel="preconnect" spa-preserve href="https://cdn.iceprosurface.com/"></link>
+        <link rel="preconnect" spa-preserve href="https://cdn.thornboo.com/"></link>
         <title>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
