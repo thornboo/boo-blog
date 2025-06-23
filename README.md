@@ -98,6 +98,8 @@ Quartz 支持丰富的 `frontmatter` 字段来自定义每篇内容的元数据�
 
 欢迎通过提交 Pull Request 或 Issue 的方式来帮助改进本项目。
 
+有关详细的开发指南，请参阅 [DEVELOPMENT.md](DEVELOPMENT.md)。
+
 ## 📄 许可证 (License)
 
 本项目采用 [MIT License](LICENSE.txt) 授权。
