@@ -13,4 +13,4 @@ export default (((setting?: Props) => {
     </div>)
   }
   return Component;
-}) satisfies QuartzComponentConstructor) 
+}) satisfies QuartzComponentConstructor)

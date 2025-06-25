@@ -31,7 +31,15 @@ export const defaultContentPageLayout: PageLayout = {
     })),
     Component.DirectLink({
       link: '/explore/',
-      title: '探索'
+      title: '目录索引'
+    }),
+    Component.DirectLink({
+      link: '/message/',
+      title: '留言板'
+    }),
+    Component.DirectLink({
+      link: '/about/',
+      title: '关于'
     })
   ],
   right: [
@@ -52,7 +60,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.DirectLink({
         link: '/explore/',
-        title: '探索'
+        title: '目录索引'
       })
     ),
     Component.ArticleTitle(),
@@ -69,7 +77,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.DesktopOnly(
       Component.DirectLink({
         link: '/explore/',
-        title: '探索'
+        title: '目录索引'
       })
     ),
   ],
