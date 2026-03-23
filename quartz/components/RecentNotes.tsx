@@ -10,17 +10,17 @@ import { classNames } from "../util/lang"
 
 interface Options {
   title?: string
-  isPage?: boolean
   limit: number
   linkToMore: SimpleSlug | false
+  showTags: boolean
   filter: (f: QuartzPluginData) => boolean
   sort: (f1: QuartzPluginData, f2: QuartzPluginData) => number
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
   limit: 3,
-  isPage: false,
   linkToMore: false,
+  showTags: true,
   filter: () => true,
   sort: byDateAndAlphabetical(cfg),
 })
@@ -33,12 +33,10 @@ export default ((userOpts?: Partial<Options>) => {
     cfg,
   }: QuartzComponentProps) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
-    const pages = allFiles.filter(opts.filter).filter((page) => !page.frontmatter?.['excalidraw-plugin']).filter((page) => {
-      return !page.frontmatter?.['no-rss']
-    }).sort(opts.sort)
+    const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
     return (
-      <div class={classNames(displayClass, "recent-notes", opts.isPage ? "recent-notes-page" : "")}>
+      <div class={classNames(displayClass, "recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentNotes.title}</h3>
         <ul class="recent-ul">
           {pages.slice(0, opts.limit).map((page) => {
@@ -60,19 +58,21 @@ export default ((userOpts?: Partial<Options>) => {
                       <Date date={getDate(cfg, page)!} locale={cfg.locale} />
                     </p>
                   )}
+                  {opts.showTags && (
+                    <ul class="tags">
+                      {tags.map((tag) => (
+                        <li>
+                          <a
+                            class="internal tag-link"
+                            href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                          >
+                            {tag}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <ul class="tags">
-                  {tags.map((tag) => (
-                    <li>
-                      <a
-                        class="internal tag-link"
-                        href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
-                      >
-                        {tag}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
               </li>
             )
           })}
@@ -80,7 +80,7 @@ export default ((userOpts?: Partial<Options>) => {
         {opts.linkToMore && remaining > 0 && (
           <p>
             <a href={resolveRelative(fileData.slug!, opts.linkToMore)}>
-              {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining: 20 })}
+              {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining })}
             </a>
           </p>
         )}
