@@ -1,17 +1,32 @@
-# Quartz v4
+# thornboo's blog
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Personal blog and notes site built on top of Quartz v4.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+This repository vendors the Quartz source code directly so the site can be customized at the config, layout, component, plugin, and style layers without depending on a separate upstream package.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## Project Structure
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+- `content/`: Markdown content for the site
+- `quartz/`: vendored Quartz source code
+- `quartz.config.ts`: site configuration
+- `quartz.layout.ts`: page layout composition
+- `public/`: generated output, ignored by git
 
-## Sponsors
+## Local Development
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Requirements:
+
+- Node.js 22+
+- pnpm
+
+Common commands:
+
+- `pnpm install`
+- `pnpm quartz build --serve`
+- `pnpm test`
+- `pnpm check`
+
+## Notes
+
+- This repository is a customized Quartz-based site, not a clean mirror of the upstream Quartz template.
+- Generated output and local caches are intentionally excluded from version control.

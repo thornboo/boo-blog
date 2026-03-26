@@ -1,11 +1,22 @@
 FROM node:22-slim AS builder
-WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json* .
-RUN npm ci
 
-FROM node:22-slim
-WORKDIR /usr/src/app
-COPY --from=builder /usr/src/app/ /usr/src/app/
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN corepack enable
+
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+
 COPY . .
-CMD ["npx", "quartz", "build", "--serve"]
+RUN pnpm quartz build
+
+FROM nginx:alpine
+
+COPY --from=builder /app/public /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

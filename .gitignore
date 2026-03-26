@@ -1,1 +1,17 @@
+# Dependencies
 node_modules
+
+# Build output
+public
+
+# Quartz cache
+quartz/.quartz-cache
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# pnpm
+pnpm-debug.log
