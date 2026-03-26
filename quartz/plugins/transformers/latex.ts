@@ -4,10 +4,10 @@ import rehypeMathjax from "rehype-mathjax/svg"
 //@ts-ignore
 import rehypeTypst from "@myriaddreamin/rehype-typst"
 import { QuartzTransformerPlugin } from "../types"
-import { KatexOptions } from "katex"
-import { Options as MathjaxOptions } from "rehype-mathjax/svg"
+import type { KatexOptions } from "katex"
+import type { Options as MathjaxOptions } from "rehype-mathjax/svg"
 //@ts-ignore
-import { Options as TypstOptions } from "@myriaddreamin/rehype-typst"
+import type { Options as TypstOptions } from "@myriaddreamin/rehype-typst"
 
 interface Options {
   renderEngine: "katex" | "mathjax" | "typst"

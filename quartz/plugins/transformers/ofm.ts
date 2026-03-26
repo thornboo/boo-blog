@@ -1,5 +1,5 @@
 import { QuartzTransformerPlugin } from "../types"
-import {
+import type {
   Root,
   Html,
   BlockContent,
@@ -8,8 +8,9 @@ import {
   Paragraph,
   Code,
 } from "mdast"
-import { Element, Literal, Root as HtmlRoot } from "hast"
-import { ReplaceFunction, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
+import type { Element, Literal, Root as HtmlRoot } from "hast"
+import type { ReplaceFunction } from "mdast-util-find-and-replace"
+import { findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
 import rehypeRaw from "rehype-raw"
 import { SKIP, visit } from "unist-util-visit"
 import path from "path"
@@ -26,7 +27,7 @@ import { FilePath, pathToRoot, slugTag, slugifyFilePath } from "../../util/path"
 import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
-import { PluggableList } from "unified"
+import type { PluggableList } from "unified"
 
 export interface Options {
   comments: boolean
@@ -373,7 +374,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 if (typeof replace === "string") {
                   node.value = node.value.replace(regex, replace)
                 } else {
-                  node.value = node.value.replace(regex, (substring: string, ...args) => {
+                  node.value = node.value.replace(regex, (substring: string, ...args: string[]) => {
                     const replaceValue = replace(substring, ...args)
                     if (typeof replaceValue === "string") {
                       return replaceValue

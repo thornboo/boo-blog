@@ -1,5 +1,5 @@
 import { QuartzTransformerPlugin } from "../types"
-import { Root } from "mdast"
+import type { Root } from "mdast"
 import { visit } from "unist-util-visit"
 import { toString } from "mdast-util-to-string"
 import Slugger from "github-slugger"

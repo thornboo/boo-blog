@@ -1,6 +1,7 @@
-import { Root as HtmlRoot } from "hast"
-import { Root as MdRoot } from "mdast"
-import { Data, VFile } from "vfile"
+import type { Root as HtmlRoot } from "hast"
+import type { Root as MdRoot } from "mdast"
+import type { Data } from "vfile"
+import { VFile } from "vfile"
 
 export type QuartzPluginData = Data
 export type MarkdownContent = [MdRoot, VFile]
