@@ -39,7 +39,8 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      folderClickBehavior: "collapse",
+      title: "内容导航",
+      folderClickBehavior: "link",
     }),
   ],
   right: [
@@ -75,7 +76,8 @@ export const defaultListPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.Explorer({
-      folderClickBehavior: "collapse",
+      title: "内容导航",
+      folderClickBehavior: "link",
     }),
   ],
   right: [],

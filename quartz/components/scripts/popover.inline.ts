@@ -43,6 +43,15 @@ async function mouseEnterHandler(
   const hash = decodeURIComponent(targetUrl.hash)
   targetUrl.hash = ""
   targetUrl.search = ""
+
+  if (!targetUrl.pathname.endsWith("/")) {
+    const path = targetUrl.pathname
+    const lastSegment = path.split("/").filter(Boolean).at(-1)
+    const looksLikeContentPath = lastSegment !== undefined && !lastSegment.includes(".")
+    if (looksLikeContentPath) {
+      targetUrl.pathname = `${path}/`
+    }
+  }
   const popoverId = `popover-${link.pathname}`
   const prevPopoverElement = document.getElementById(popoverId)
 

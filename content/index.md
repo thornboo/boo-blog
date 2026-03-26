@@ -1,23 +1,28 @@
 ---
 title: thornboo's blog
-description: 记录工作、学习、项目和一些还没来得及忘掉的想法。
+description: 记录文章、知识笔记、项目实践，以及一些值得留下来的想法。
 ---
 
 你好，我是 thornboo，欢迎来到我的博客。
 
-这里主要记录工作、学习、项目和一些值得留下来的想法。内容大多和写代码、做产品、踩坑复盘、技术判断有关，偶尔也会写一点生活里的观察。
+这里主要分成四条阅读路径：
 
-更新不一定频繁，但我会尽量把每篇写清楚，既对当下有用，也方便以后回头看。
+- [[posts|文章]]：适合完整表达、可以独立阅读的公开输出
+- [[notes|笔记]]：偏知识沉淀、概念整理和长期维护的条目
+- [[projects|项目]]：围绕某个项目持续增长的一组记录
+- [[tags|标签]]：按主题横向浏览内容
 
-你可以从这几个入口开始浏览：
+如果你第一次来到这里，可以先从这些入口开始：
 
-- [文章](./posts/)
-- [笔记](./notes/)
-- [项目](./projects/)
-- [标签](./tags/)
+- [[posts/tech|技术文章]]：看完整的技术输出
+- [[notes/workflow|工作流笔记]]：看我怎么整理写作和博客流程
+- [[projects/openclaw|openclaw]]：看项目型内容以后会怎样组织
+- [[tags|标签]]：按 `vue`、`vite`、`git` 这类主题横向找内容
 
-如果这些内容刚好也对你有帮助，那就更好了。想联系我的话，可以去 [GitHub](https://github.com/thornboo) 找我，或者发邮件到 <zhaozhuang1210@gmail.com>。
+如果你想直接看已经写出来的几篇示例文章，也可以从这里进入：
 
-Hi, I'm thornboo.
+- [[posts/tech/vue-reset-ref-state|Vue 实现重置 ref 状态的方法]]
+- [[posts/tech/vue-cli-to-vite-migration|vue-cli 项目迁移到 Vite 遇到的问题和解决办法]]
+- [[posts/tech/when-to-commit|什么情况下需要 commit]]
 
-This is where I keep notes on code, projects, and ideas worth keeping. Most posts are in Chinese, with some English when it feels natural.
+想联系我的话，可以去 [GitHub](https://github.com/thornboo) 找我，或者发邮件到 <zhaozhuang1210@gmail.com>。

@@ -4,9 +4,9 @@ description: commit 不是机械保存，而是把一个独立、可理解、可
 date: 2026-03-29
 draft: false
 tags:
-  - Git
-  - 工作流
-  - 工程实践
+  - git
+  - workflow
+  - engineering
 aliases: []
 cssclasses: []
 socialImage: ""
@@ -148,7 +148,7 @@ comments: true
 
 commit 最重要的不是频率，而是边界。
 
-如果提交里顺手夹带了状态管理修补或工程迁移，边界通常就会变差。像 [[vue-reset-ref-state]] 和 [[vue-cli-to-vite-migration]] 这种主题，更适合拆成独立提交处理。
+如果提交里顺手夹带了状态管理修补或工程迁移，边界通常就会变差。像 [[posts/tech/vue-reset-ref-state|Vue 实现重置 ref 状态的方法]] 和 [[posts/tech/vue-cli-to-vite-migration|vue-cli 项目迁移到 Vite 遇到的问题和解决办法]] 这种主题，更适合拆成独立提交处理。
 
 好的 commit 不是“我改了一堆东西”，而是“我完成了一件清楚的事”。
 

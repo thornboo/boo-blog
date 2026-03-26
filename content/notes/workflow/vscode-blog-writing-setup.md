@@ -4,8 +4,9 @@ description: 把编辑器调顺手，能明显降低写作阻力。
 date: 2026-03-22
 draft: false
 tags:
-  - VSCode
-  - 笔记
+  - vscode
+  - workflow
+  - blog
 aliases: []
 comments: false
 ---
