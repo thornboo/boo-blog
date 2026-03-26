@@ -248,6 +248,7 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+      min-height: 0;
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;

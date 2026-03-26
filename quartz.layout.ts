@@ -38,7 +38,9 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderClickBehavior: "collapse",
+    }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +64,19 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "最新文章",
+        limit: 5,
+        showTags: true,
+        linkToMore: false,
+        filter: (page) => Boolean(page.slug?.startsWith("posts/")) && page.slug !== "posts/index",
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+    Component.Explorer({
+      folderClickBehavior: "collapse",
+    }),
   ],
   right: [],
 }
