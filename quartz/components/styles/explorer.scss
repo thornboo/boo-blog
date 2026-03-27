@@ -32,11 +32,13 @@
   flex-direction: column;
   overflow-y: hidden;
 
-  min-height: 1.2rem;
-  flex: 0 1 auto;
+  min-height: 0;
+  flex: 1 1 auto;
+  position: relative;
 
   &.collapsed {
     flex: 0 1 1.2rem;
+    min-height: 1.2rem;
 
     & .fold {
       transform: rotateZ(-90deg);
@@ -113,6 +115,8 @@ button.desktop-explorer {
 
 .explorer-content {
   list-style: none;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow: hidden;
   overflow-y: auto;
   margin-top: 0.5rem;

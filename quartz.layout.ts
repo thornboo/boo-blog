@@ -42,6 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "内容导航",
       folderClickBehavior: "link",
     }),
+    Component.DesktopOnly(Component.Sakana()),
   ],
   right: [
     Component.Graph(),
@@ -79,6 +80,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "内容导航",
       folderClickBehavior: "link",
     }),
+    Component.DesktopOnly(Component.Sakana()),
   ],
   right: [],
 }

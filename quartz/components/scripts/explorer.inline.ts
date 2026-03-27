@@ -20,6 +20,11 @@ type FolderState = {
 }
 
 let currentExplorerState: Array<FolderState>
+
+function persistExplorerState() {
+  localStorage.setItem("fileTree", JSON.stringify(currentExplorerState))
+}
+
 function toggleExplorer(this: HTMLElement) {
   const nearestExplorer = this.closest(".explorer") as HTMLElement
   if (!nearestExplorer) return
@@ -75,8 +80,7 @@ function toggleFolder(evt: MouseEvent) {
     })
   }
 
-  const stringifiedFileTree = JSON.stringify(currentExplorerState)
-  localStorage.setItem("fileTree", stringifiedFileTree)
+  persistExplorerState()
 }
 
 function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElement {
@@ -205,6 +209,21 @@ async function setupExplorer(currentSlug: FullSlug) {
           previousState === undefined ? opts.folderDefaultState === "collapsed" : previousState,
       }
     })
+
+    const ancestry = trie.ancestryChain(currentSlug.split("/")) ?? []
+    let stateChanged = false
+    for (const node of ancestry) {
+      if (!node.isFolder) continue
+      const folderState = currentExplorerState.find((item) => item.path === node.slug)
+      if (folderState?.collapsed) {
+        folderState.collapsed = false
+        stateChanged = true
+      }
+    }
+
+    if (stateChanged && opts.useSavedState) {
+      persistExplorerState()
+    }
 
     const explorerUl = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue

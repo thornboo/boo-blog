@@ -1,0 +1,38 @@
+@use "../../styles/variables.scss" as *;
+
+.sakana-widget {
+  position: absolute;
+  left: 40px;
+  bottom: -40px;
+  z-index: 2;
+  width: 170px;
+  min-height: 190px;
+  overflow: visible;
+}
+
+.sakana-widget.desktop-only {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.sakana-widget > div {
+  position: relative !important;
+  width: 156px;
+  min-height: 176px;
+}
+
+.sakana-widget .sakana-widget-app {
+  transform-origin: left bottom;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.18));
+}
+
+.sidebar.left:has(.sakana-widget) .explorer-content {
+  padding-bottom: 11rem;
+}
+
+@media all and ($mobile) {
+  .sidebar.left:has(.sakana-widget) .explorer-content {
+    padding-bottom: 0;
+  }
+}
