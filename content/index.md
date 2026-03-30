@@ -1,28 +1,22 @@
 ---
 title: thornboo's blog
-description: 记录文章、知识笔记、项目实践，以及一些值得留下来的想法。
+description: 记录文章、笔记、专题，以及此刻正在发生的事情。
 ---
 
-你好，我是 thornboo，欢迎来到我的博客。
+你好，我是 thornboo。
 
-这里主要分成四条阅读路径：
+这个博客现在就按最简单的几块来放东西。
 
-- [[posts|文章]]：适合完整表达、可以独立阅读的公开输出
-- [[notes|笔记]]：偏知识沉淀、概念整理和长期维护的条目
-- [[projects|项目]]：围绕某个项目持续增长的一组记录
-- [[tags|标签]]：按主题横向浏览内容
+- [[posts|文章]]：那些我已经想清楚，愿意完整写出来的东西
+- [[notes|笔记]]：那些我知道以后还会回来补、回来翻的东西
+- [[topics|专题]]：那些我知道不会只写一篇，会慢慢长下去的东西
+- [[now|Now]]：我现在正在做什么，也在想什么
 
-如果你第一次来到这里，可以先从这些入口开始：
+如果你第一次来这里，我建议先随便点下面几个入口：
 
-- [[posts/tech|技术文章]]：看完整的技术输出
-- [[notes/workflow|工作流笔记]]：看我怎么整理写作和博客流程
-- [[projects/openclaw|openclaw]]：看项目型内容以后会怎样组织
-- [[tags|标签]]：按 `vue`、`vite`、`git` 这类主题横向找内容
+- [[topics|专题]]
+- [[notes|笔记]]
+- [[now|Now]]
+- [[archive|归档]]
 
-如果你想直接看已经写出来的几篇示例文章，也可以从这里进入：
-
-- [[posts/tech/vue-reset-ref-state|Vue 实现重置 ref 状态的方法]]
-- [[posts/tech/vue-cli-to-vite-migration|vue-cli 项目迁移到 Vite 遇到的问题和解决办法]]
-- [[posts/tech/when-to-commit|什么情况下需要 commit]]
-
-想联系我的话，可以去 [GitHub](https://github.com/thornboo) 找我，或者发邮件到 <zhaozhuang1210@gmail.com>。
+想按主题横向找内容，可以去 [[tags|标签]]。

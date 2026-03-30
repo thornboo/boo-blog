@@ -41,6 +41,35 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "目录",
       folderClickBehavior: "link",
+      sortFn: (a, b) => {
+        const order = {
+          notes: 0,
+          posts: 1,
+          topics: 2,
+          tags: 3,
+          archive: 4,
+          now: 5,
+          about: 6,
+        }
+        const aRank = order[a.slugSegment] ?? Number.MAX_SAFE_INTEGER
+        const bRank = order[b.slugSegment] ?? Number.MAX_SAFE_INTEGER
+        if (aRank !== bRank) {
+          return aRank - bRank
+        }
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+        return !a.isFolder && b.isFolder ? 1 : -1
+      },
+      filterFn: (node) => node.slugSegment !== "tags" || Boolean(node.data),
+      mapFn: (node) => {
+        if (node.slugSegment === "tags" && node.data) {
+          node.isFolder = false
+        }
+      },
     }),
     Component.DesktopOnly(Component.Sakana()),
   ],
@@ -79,6 +108,35 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "目录",
       folderClickBehavior: "link",
+      sortFn: (a, b) => {
+        const order = {
+          notes: 0,
+          posts: 1,
+          topics: 2,
+          tags: 3,
+          archive: 4,
+          now: 5,
+          about: 6,
+        }
+        const aRank = order[a.slugSegment] ?? Number.MAX_SAFE_INTEGER
+        const bRank = order[b.slugSegment] ?? Number.MAX_SAFE_INTEGER
+        if (aRank !== bRank) {
+          return aRank - bRank
+        }
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+        return !a.isFolder && b.isFolder ? 1 : -1
+      },
+      filterFn: (node) => node.slugSegment !== "tags" || Boolean(node.data),
+      mapFn: (node) => {
+        if (node.slugSegment === "tags" && node.data) {
+          node.isFolder = false
+        }
+      },
     }),
     Component.DesktopOnly(Component.Sakana()),
   ],
