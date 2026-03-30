@@ -29,7 +29,7 @@ function mountSakana() {
   widget = new SakanaWidget({
     character: "takina",
     size: 150,
-    controls: true,
+    controls: false,
     rod: true,
     draggable: true,
   })

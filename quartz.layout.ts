@@ -39,7 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      title: "内容导航",
+      title: "目录",
       folderClickBehavior: "link",
     }),
     Component.DesktopOnly(Component.Sakana()),
@@ -77,7 +77,7 @@ export const defaultListPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.Explorer({
-      title: "内容导航",
+      title: "目录",
       folderClickBehavior: "link",
     }),
     Component.DesktopOnly(Component.Sakana()),
