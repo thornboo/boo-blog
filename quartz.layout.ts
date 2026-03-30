@@ -42,7 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "目录",
       folderClickBehavior: "link",
       sortFn: (a, b) => {
-        const order = {
+        const order: Record<string, number> = {
           notes: 0,
           posts: 1,
           topics: 2,
@@ -109,7 +109,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "目录",
       folderClickBehavior: "link",
       sortFn: (a, b) => {
-        const order = {
+        const order: Record<string, number> = {
           notes: 0,
           posts: 1,
           topics: 2,
