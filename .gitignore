@@ -16,3 +16,4 @@ tsconfig.tsbuildinfo
 # pnpm
 pnpm-debug.log
 .idea
+.snow
