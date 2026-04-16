@@ -17,3 +17,7 @@ tsconfig.tsbuildinfo
 pnpm-debug.log
 .idea
 .snow
+.playwright-mcp
+.serena
+content/.obsidian
+.omx/
